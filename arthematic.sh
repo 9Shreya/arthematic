@@ -53,3 +53,10 @@ do
 done
 
 echo $array in assending order
+for (( index=${#array[@]};index>=1;index-- ))
+do
+        duplicateArray[$(( ${#array[@]}-$index+1 ))]=${array[$index]}
+done
+
+echo $duplicateArray in decending order
+
