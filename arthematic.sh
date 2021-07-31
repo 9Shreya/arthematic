@@ -1,4 +1,4 @@
-#! /bin/zsh
+#! /bin/zsh 
  read  "a?enter a no "
  read  "b?enter a no "
  read "c?enter a no "
@@ -17,7 +17,7 @@ echo $a % $b + $c=$prob4
 
 declare -A dictionary
 
-dictionary=([" a+b*c "]=$prob1 [" a*b+c"]=$prob2 ["c+a/b"]=$prob3 ["a%b+c"]=$pr$
+dictionary=([" a+b*c "]=$prob1 [" a*b+c"]=$prob2 ["c+a/b"]=$prob3 ["a%b+c"]=$prob4)
 echo $dictionary
 
 declare -a array
@@ -36,3 +36,20 @@ done
 echo array which stores value of dictionary ${array[@]}
 
 
+declare -a duplicateArray
+
+for (( index=1;index<=${#array[@]};index++ ))
+do
+        larger=0
+        for (( count=1;count<=${#array[@]};count++ ))
+        do
+        if [ ${array[$index]} -lt ${array[$count]} ]
+        then
+        larger=${array[$index]}
+        array[$index]=${array[$count]}
+        array[$count]=$larger
+        fi
+        done
+done
+
+echo $array in assending order
