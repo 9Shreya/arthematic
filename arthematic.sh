@@ -5,3 +5,6 @@
 
 prob1=$(( a+b*c ))
 echo $a + $b x $c= $prob1
+
+prob2=$(( a*b+c ))
+echo $a x $b + $c=$prob2
