@@ -14,3 +14,9 @@ echo $c + $a / $b=$prob3
 
 prob4=$(( a%b+c ))
 echo $a % $b + $c=$prob4
+
+declare -A dictionary
+
+dictionary=([" a+b*c "]=$prob1 [" a*b+c"]=$prob2 ["c+a/b"]=$prob3 ["a%b+c"]=$pr$
+echo $dictionary
+
