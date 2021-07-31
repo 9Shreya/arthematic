@@ -11,3 +11,6 @@ echo $a x $b + $c=$prob2
 
 prob3=$(( c+a/b ))
 echo $c + $a / $b=$prob3
+
+prob4=$(( a%b+c ))
+echo $a % $b + $c=$prob4
